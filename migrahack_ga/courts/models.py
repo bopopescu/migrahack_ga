@@ -17,6 +17,11 @@ class Asylum(models.Model):
     grant_rate = models.FloatField()
 
 
+class Detainers(models.Model):
+    state = models.CharField(max_length=20)
+    year  = models.IntegerField()
+    detainer_count = models.IntegerField()
+
 class Judge(models.Model):
     name     = models.CharField(max_length=50)
     court    = models.ForeignKey(Court, null=True)
